@@ -133,17 +133,36 @@ app.post("/postUser", async function(req, res){
   const dinner = req.body.dinner; //type yes if you want to subscribe this meal
   const nightSnack = req.body.nightSnack; //type yes if you want to subscribe this meal
 
-  const toBeUpdate = [breakfast, mornignSnack, lunch, afternoonSnack, eveningSnack, dinner];
+  const toBeUpdate = [
+    breakfast,
+    mornignSnack,
+    lunch,
+    afternoonSnack,
+    eveningSnack,
+    dinner,
+  ];
   var count = 6;
   for (let i = 0; i < toBeUpdate.length; i++) {
     if (eMail && toBeUpdate[i]) {
-      const email = await EmailAndTopic.find(
-        { _id: "6278c5c63bf061635e265edb" }
-      );
+      const email = await EmailAndTopic.find({
+        _id: "6278c5c63bf061635e265edb",
+      });
       email[0][count].push(eMail);
       await email[0].save();
     }
     count += 3;
+  }
+  if (eMail && nightSnack) {
+    EmailAndTopic.updateOne(
+      { _id: "6278c5c63bf061635e265edb" },
+      { $push: { 22: eMail } },
+      function (err, updated) {
+        if (updated) {
+          console.log("updated");
+        }
+      }
+    );
+    res.json("updated");
   }
 
   res.json("updated");
