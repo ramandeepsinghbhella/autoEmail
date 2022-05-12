@@ -21,7 +21,7 @@ To run this project, you will need to add the following environment variables to
 
 ### Documentation
 
-I've not creat any API, we simply run our and code and can send e-mails to our subscribers at particular time.
+I haven't created any API, we simply run our and code and can send e-mails to our subscribers at particular time.
 
 #### Description
 In this project I focused on diet plan. I've have designed total 7 meals in a day. Every meal will be taken after 3 hours which is also benicial for out health. And here I'm directly putting my data in database because we're only dealing with the procedure of sending e-mail on particular topic to the subscriber who subscribed that topic at a particular time. 
