@@ -1,0 +1,27 @@
+{
+  "name": "autoemail",
+  "version": "1.0.0",
+  "description": "Here we created an app from which we can send e-mail to our subscribers who subscribed particular topic on a particulart time. I'm using only EXPRESS and mongoDB.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramandeepsinghbhella/autoEmail.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ramandeepsinghbhella/autoEmail/issues"
+  },
+  "homepage": "https://github.com/ramandeepsinghbhella/autoEmail#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.2",
+    "node-cron": "^3.0.0",
+    "nodemailer": "^6.7.5"
+  }
+}
